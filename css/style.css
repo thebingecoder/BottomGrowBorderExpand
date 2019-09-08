@@ -1,0 +1,200 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  color: #757575;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.clear:after {
+  content: ' ';
+  display: table;
+  clear: both;
+  visibility: hidden;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  background: #107896;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.wrap.border-grow-wrap {
+  background: #c2571a;
+}
+.wrap.top-grow-wrap {
+  background: #9a2617;
+}
+.wrap h1 {
+  width: 100%;
+  font-size: 48px;
+  text-align: center;
+  padding: 40px 0px;
+  text-transform: uppercase;
+}
+.wrap ul {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.wrap ul li {
+  display: inline-block;
+  padding: 20px;
+  margin: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+.wrap .bottom-grow-list li {
+  position: relative;
+  cursor: pointer;
+}
+.wrap .bottom-grow-list li:before {
+  position: absolute;
+  content: ' ';
+  width: 0;
+  height: 10px;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+.wrap .bottom-grow-list li:hover:before {
+  width: calc(100% - 40px);
+  opacity: 1;
+}
+.wrap .top-grow-list li {
+  position: relative;
+  cursor: pointer;
+}
+.wrap .top-grow-list li:before {
+  position: absolute;
+  content: ' ';
+  width: 0;
+  height: 10px;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+.wrap .top-grow-list li:hover:before {
+  width: calc(100% - 40px);
+  opacity: 1;
+}
+.wrap .border-grow-list li {
+  position: relative;
+  cursor: pointer;
+}
+.wrap .border-grow-list li:before {
+  position: absolute;
+  content: ' ';
+  width: 0;
+  height: 0;
+  left: -5px;
+  bottom: -5px;
+  border: 5px dashed #fff;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+}
+.wrap .border-grow-list li:hover:before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.wrap .border-grow-left-list li {
+  position: relative;
+  cursor: pointer;
+}
+.wrap .border-grow-left-list li:before {
+  position: absolute;
+  content: ' ';
+  width: 0;
+  height: 100%;
+  left: -5px;
+  bottom: -5px;
+  border: 5px dashed #fff;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+}
+.wrap .border-grow-left-list li:hover:before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

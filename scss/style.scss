@@ -1,0 +1,166 @@
+@import 'reset';
+@import 'variables';
+@import 'global';
+
+
+.wrap{
+  width: 100%;
+  min-height: 100vh;
+  background: $light-blue-bg;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  &.border-grow-wrap{
+    background: $orange-bg;
+  }
+
+  &.top-grow-wrap{
+    background: $red-bg;
+  }
+
+
+  h1{
+    width: 100%;
+    font-size: 48px;
+    text-align:center;
+    padding: 40px 0px;
+    text-transform: uppercase;
+  }
+  
+  ul {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    
+    li{
+      display: inline-block;
+      padding: 20px;
+      margin: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+
+  .bottom-grow-list{
+
+    li{
+      position: relative;
+      cursor: pointer;
+
+      &:before{
+        position: absolute;
+        content: ' ';
+        width: 0;
+        height: 10px;
+        background: #fff;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        opacity: 0;
+        transition: all .4s ease-in-out;
+      }
+    }
+
+    li:hover{
+
+      &:before{
+        width: calc(100% - 40px);
+        opacity: 1;   
+      }
+    }
+  }
+
+  .top-grow-list{
+
+    li{
+      position: relative;
+      cursor: pointer;
+
+      &:before{
+        position: absolute;
+        content: ' ';
+        width: 0;
+        height: 10px;
+        background: #fff;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        opacity: 0;
+        transition: all .4s ease-in-out;
+      }
+    }
+
+    li:hover{
+
+      &:before{
+        width: calc(100% - 40px);
+        opacity: 1;   
+      }
+    }
+  }
+
+  .border-grow-list{
+
+    li{
+      position: relative;
+      cursor: pointer;
+
+      &:before{
+        position: absolute;
+        content: ' ';
+        width: 0;
+        height: 0;
+        left: -5px;
+        bottom: -5px;
+        border: 5px dashed #fff;
+        transition: all .4s ease-in-out;
+        opacity: 0;
+      }
+    }
+
+    li:hover{
+
+      &:before{
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+      }
+    }
+  }
+
+  .border-grow-left-list{
+
+    li{
+      position: relative;
+      cursor: pointer;
+
+      &:before{
+        position: absolute;
+        content: ' ';
+        width: 0;
+        height: 100%;
+        left: -5px;
+        bottom: -5px;
+        border: 5px dashed #fff;
+        transition: all .4s ease-in-out;
+        opacity: 0;
+      }
+    }
+
+    li:hover{
+
+      &:before{
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+
